@@ -41,9 +41,9 @@ services:
     links:
       - db:database
     environment:
-        ETHEREUM_JSONRPC_HTTP_URL: http://localhost:9946/
-        ETHEREUM_JSONRPC_TRACE_URL: http://localhost:9946/
-        ETHEREUM_JSONRPC_WS_URL: ws://localhost:9946/
+        ETHEREUM_JSONRPC_HTTP_URL: https://evm-testnet.dev.opentensor.ai/
+        ETHEREUM_JSONRPC_TRACE_URL: https://evm-testnet.dev.opentensor.ai/
+        ETHEREUM_JSONRPC_WS_URL: wss://evm-testnet.dev.opentensor.ai/
         CHAIN_ID: '964'
         HEART_BEAT_TIMEOUT: 30
         LOGO: /images/bittensor-logo.svg

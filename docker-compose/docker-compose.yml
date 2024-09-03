@@ -52,7 +52,6 @@ services:
         HEART_BEAT_TIMEOUT: 30
         #LOGO: /images/bittensor-logo.svg
         TRACE_LAST_BLOCK: 0
-        PORT: 1234
 
   visualizer:
     extends:
@@ -70,6 +69,8 @@ services:
     extends:
       file: ./services/frontend.yml
       service: frontend
+    environment:
+      PORT: 1234
 
   stats-db-init:
     extends:

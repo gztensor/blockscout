@@ -41,12 +41,18 @@ services:
     links:
       - db:database
     environment:
+        ETHEREUM_JSONRPC_VARIANT: 'geth'
+        BLOCK_TRANSFORMER: 'clique'
+        ETHEREUM_JSONRPC_TRANSPORT: 'http'
         ETHEREUM_JSONRPC_HTTP_URL: https://evm-testnet.dev.opentensor.ai/
         ETHEREUM_JSONRPC_TRACE_URL: https://evm-testnet.dev.opentensor.ai/
-        ETHEREUM_JSONRPC_WS_URL: wss://evm-testnet.dev.opentensor.ai/
+        #ETHEREUM_JSONRPC_WS_URL: wss://evm-testnet.dev.opentensor.ai/
+        ETHEREUM_JSONRPC_HTTP_INSECURE: 'true'
         CHAIN_ID: '945'
         HEART_BEAT_TIMEOUT: 30
-        LOGO: /images/bittensor-logo.svg
+        #LOGO: /images/bittensor-logo.svg
+        TRACE_LAST_BLOCK: 0
+        PORT: 1234
 
   visualizer:
     extends:

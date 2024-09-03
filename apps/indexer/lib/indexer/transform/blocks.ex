@@ -28,13 +28,16 @@ defmodule Indexer.Transform.Blocks do
   """
   def signer(block) when is_map(block) do
     # Last 65 bytes is the signature. Multiply by two since we haven't transformed to raw bytes
-    {extra_data, signature} = String.split_at(trim_prefix(block.extra_data), -130)
+    # {extra_data, signature} = String.split_at(trim_prefix(block.extra_data), -130)
 
-    block = %{block | extra_data: extra_data}
+    # block = %{block | extra_data: extra_data}
 
-    signature_hash = signature_hash(block)
+    # signature_hash = signature_hash(block)
 
-    recover_pub_key(signature_hash, decode(signature))
+    # recover_pub_key(signature_hash, decode(signature))
+
+    # Frontier doesn't have block signers 
+    "0x0000000000000000000000000000000000000000"
   end
 
   # Get EIP-1559 compatible block header

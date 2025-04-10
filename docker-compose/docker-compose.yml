@@ -48,7 +48,7 @@ services:
         ETHEREUM_JSONRPC_TRACE_URL: https://test.finney.opentensor.ai/
         #ETHEREUM_JSONRPC_WS_URL: wss://test.finney.opentensor.ai/
         ETHEREUM_JSONRPC_HTTP_INSECURE: 'true'
-        CHAIN_ID: '945'
+        CHAIN_ID: '964'
         HEART_BEAT_TIMEOUT: 30
         #LOGO: /images/bittensor-logo.svg
         TRACE_LAST_BLOCK: 0
